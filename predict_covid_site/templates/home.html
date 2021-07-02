@@ -6,9 +6,14 @@
 	<h3 class="text text-center">Covid Predictor</h3>
 	<div class="container">
 		{% if data %}
-
-			{{ result }}
-
+			<div class="row row-sm-3">
+				<h5 class="alert alert-{{ alert }} alert-dismissible fade show" role="alert"> 
+					You Tested {{ result }}
+					<span type="button" class="btn btn-sm close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+					 </span>
+				</h5>
+			</div>
 		{% endif %}
 	</div>
 	<div class="container">
@@ -60,7 +65,7 @@
 					</div>
 
 					<div align="center">
-						<input type="submit" name="predict" value="predict" class="btn btn-outline-info">
+						<input type="submit" name="predict" value="predict" class="btn btn-outline-info" id="test">
 					</div>
 			
 		</form>
